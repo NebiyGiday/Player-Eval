@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  body {
+    font-family: "DM Sans", system-ui, sans-serif;
+  }
+}
+
+@layer components {
+  .card {
+    @apply bg-white border border-gray-100 rounded-2xl p-4;
+  }
+  .btn-primary {
+    @apply w-full py-3 px-4 bg-brand-green text-white rounded-xl font-medium text-sm transition-opacity hover:opacity-90 active:scale-95;
+  }
+  .btn-outline {
+    @apply w-full py-3 px-4 border border-brand-green text-brand-green rounded-xl font-medium text-sm transition-colors hover:bg-brand-green-light;
+  }
+  .badge-green {
+    @apply inline-flex px-2 py-1 rounded-full text-xs font-medium bg-brand-green-light text-brand-green-dark;
+  }
+  .badge-amber {
+    @apply inline-flex px-2 py-1 rounded-full text-xs font-medium bg-brand-amber-light text-amber-800;
+  }
+  .strength-pill {
+    @apply flex items-center gap-2 px-3 py-2 bg-brand-green-light rounded-lg mb-1.5;
+  }
+  .focus-pill {
+    @apply flex items-center gap-2 px-3 py-2 bg-brand-amber-light rounded-lg mb-1.5;
+  }
+}
